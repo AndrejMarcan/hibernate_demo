@@ -49,9 +49,7 @@ public class Author {
     @JoinTable(
         name = "author_book",
         joinColumns = { @JoinColumn(name = "author_id", updatable = true, nullable = true) }, 
-        inverseJoinColumns = { @JoinColumn(name = "book_id", updatable = true, nullable = true) },
-        foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT),
-        inverseForeignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT)
+        inverseJoinColumns = { @JoinColumn(name = "book_id", updatable = true, nullable = true) }
     )
 	private List<Book> books = new ArrayList<>();
 }
